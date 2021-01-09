@@ -12,4 +12,7 @@ Adding new records, listing them, search for contacts saved, and deleting the ph
 ## 1-Add informations of contacts:
 we make a function that ask the user to enter the numbers of contacts which he need to add to the phonebook
 then we ask user to enter the name followed by the number , this data will be saved to the arrays (list)
+## 2-Remove informations of contacts from phonebook list:
+we make a function that remove the contact by asking the user to enter the index of the contact that he want to remove it from phonebook list
+then we remove it from the list
 
