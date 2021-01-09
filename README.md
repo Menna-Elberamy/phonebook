@@ -18,7 +18,7 @@ then we ask user to enter the name followed by the number , this data will be sa
 we make a function that remove the contact by asking the user to enter the index of the contact that he want to remove it from phonebook list
 then we remove it from the list.
 ## 3-  view contact (search by index) from phonebook list:
- This function extracts (view) the contact from the list (array) , by asking the user to enter the index of this contact which he searched for.
+ This function extracts (view) the searched contact from the list (array) of the phonebook  , by asking the user to enter the index of this contact which he searched for.
 ## 4-  view all contact from phonebook list:
  This function extracts all contacts  from the phonebook list and view the added / stored if the user not fill the whole list the un-filled part
  will appear with (no contact added)
