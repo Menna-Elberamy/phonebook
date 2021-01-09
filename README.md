@@ -10,6 +10,7 @@ phonebook project
 Adding new records, listing them, search for contacts saved, and deleting the phonebook records are the basic functions which make up the main menu of this Phonebook application (as shown in the main menu screenshot below).
 # Menu of the phonebook(append,delete,view,view all)
 When we open the program the options is shown, the users have an availability to choose the number of the function that he wants to deal with it 
+![WhatsApp Image 2021-01-09 at 10 58 48 PM](https://user-images.githubusercontent.com/53313249/104108615-dbd76880-52ce-11eb-88cf-a26a290ea5d6.jpeg)
 # Functions of the phonebook
 ## 1-Add informations of contacts:
 we make a function that ask the user to enter the numbers of contacts (max 5 contacts) which he need to add to the phonebook
