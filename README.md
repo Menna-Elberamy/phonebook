@@ -22,4 +22,4 @@ then we remove it from the list.
 ## 4-  view all contact from phonebook list:
  This function extracts all contacts  from the phonebook list and view the added / stored if the user not fill the whole list the un-filled part
  will appear with (no contact added)
-<img width="972" alt="Screen Shot 2021-01-06 at 12 16 37 PM" src="https://user-images.githubusercontent.com/54389709/104108306-33280980-52cc-11eb-8099-cd74384e7fdd.png">
+
