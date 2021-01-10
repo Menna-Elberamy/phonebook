@@ -114,14 +114,13 @@ home:
 
     ; take number of contacts you wanna add
    call ReadInt
-   ;enter name
+   
+;enter name
      mov edx,OFFSET enter_name
     call WriteString
     inc edx
     call crlf
-   
-   
-     
+ 
  cmp eax,1
  je  add1
  cmp eax,2
@@ -230,6 +229,125 @@ add3:
     mov ecx ,(LENGTHOF str2)-1
      call ReadString
      call crlf
+     
+     mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+      mov edx,OFFSET str4
+     mov ecx ,(LENGTHOF str4)-1
+     call ReadString
+     call crlf
+
+     mov edx,OFFSET added
+    call WriteString
+    call crlf
+        jmp again
+
+    
+
+      ;if 5
+   add5:
+     mov edx,OFFSET str1
+     mov ecx ,(LENGTHOF str1)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+    mov edx,OFFSET str2
+    mov ecx ,(LENGTHOF str2)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+     mov edx,OFFSET str3
+    mov ecx ,(LENGTHOF str2)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+      mov edx,OFFSET str4
+     mov ecx ,(LENGTHOF str4)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+     mov edx,OFFSET str5
+     mov ecx ,(LENGTHOF str5)-1
+     call ReadString
+     call crlf
+
+    mov edx,OFFSET added
+    call WriteString
+    call crlf
+    jmp again
+
+   
+ ;if more than 5 
+no_space:
+    jmp again
+
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ ; REMOVE NUMBER by its index
+
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ remove:
+    mov edx,OFFSET remove_name
+    call WriteString
+    call crlf
+
+
+
+  ; take number of contacts you wanna add
+   call ReadInt
+     
+ cmp eax,1
+ je  remove1
+ cmp eax,2
+ je  remove2
+ cmp eax,3
+ je  remove3
+ cmp eax,4
+ je  remove4
+ cmp eax,5
+ je  remove5
+ jne again
+
+
+ remove1:
+
+push edi           ;save registers
+push es
+push ds
+mov ax,0
+mov ecx,1
+mov edi,OFFSET str1
+pop es               ;load ES with DS
+rep stosw            ;clear str1
+pop es               ;restore registers
+pop edi
+
+ mov edx,OFFSET removed
+    call WriteString
+    call crlf
+    jmp again
+    
+
 	 remove2:
 
 push edi            ;save registers
@@ -344,3 +462,4 @@ view_number:
  cmp eax,5
  je  view5
  jne again
+
