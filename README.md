@@ -11,12 +11,13 @@ Adding new records, listing them, search for contacts saved, and deleting the ph
 # Menu of the phonebook(append,delete,view,view all)
 When we open the program the options is shown, the users have an availability to choose the number of the function that he wants to deal with it 
 
-![screenshot](https://user-images.githubusercontent.com/53313249/104126770-1b519380-5367-11eb-99b3-c2a67cceb272.jpeg)
-
 # Functions of the phonebook
 ## 1-Add informations of contacts:
 we make a function that ask the user to enter the numbers of contacts (max 5 contacts) which he need to add to the phonebook
-then we ask user to enter the name followed by the number , this data will be saved to the arrays (list).
+then we ask user to enter the name followed by the number , this data will be saved to the arrays (list) as screenshot shown below
+
+![screenshot](https://user-images.githubusercontent.com/53313249/104126770-1b519380-5367-11eb-99b3-c2a67cceb272.jpeg)
+
 ## 2-Remove informations of contacts from phonebook list:
 we make a function that remove the contact by asking the user to enter the index of the contact that he want to remove it from phonebook list
 then we remove it from the list.
