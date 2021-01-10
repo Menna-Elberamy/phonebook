@@ -462,4 +462,116 @@ view_number:
  cmp eax,5
  je  view5
  jne again
+view1:
+    mov edx,OFFSET str1   
+    call WriteString
+    call crlf
+    jmp again
 
+  
+  view2:
+   mov edx,OFFSET str2   
+    call WriteString
+    call crlf
+    jmp again
+
+  
+  view3:
+   mov edx,OFFSET str3   
+    call WriteString
+    call crlf
+    jmp again
+
+
+    view4:
+   mov edx,OFFSET str4  
+    call WriteString
+    call crlf
+    jmp again
+
+
+    view5:
+   mov edx,OFFSET str5   
+    call WriteString
+    call crlf
+    jmp again
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;view all contacts
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+view_all:
+
+  mov edx,OFFSET check_msg
+   call WriteString
+   call crlf
+
+    mov edx,OFFSET str1   
+    call WriteString
+    call crlf
+  
+     mov edx,OFFSET str2    
+    call WriteString
+    call crlf
+  
+    mov edx,OFFSET str3 
+    call WriteString
+    call crlf
+
+    mov edx,OFFSET str4    
+    call WriteString
+    call crlf
+
+    mov edx,OFFSET str5   
+    call WriteString
+    call crlf
+    jmp again
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;wrong choice message
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ wrong_choice:
+   mov edx,OFFSET wrong
+   call WriteString
+   call crlf
+
+    mov edx,OFFSET please
+    call WriteString
+    call crlf
+    call crlf
+    
+    jmp home
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; go to home list again
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+again:
+mov edx,OFFSET another_option
+    call WriteString
+    call crlf
+
+    call ReadInt
+     cmp eax,1
+      je home 
+      cmp eax,0
+      je close
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;terminate the program
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ close:
+    INVOKE ExitProcess,0 
+ INVOKE ExitProcess,0 
+main ENDP
+end main
