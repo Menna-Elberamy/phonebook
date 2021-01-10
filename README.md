@@ -28,4 +28,5 @@ This function extracts (view) the searched contact from the list (array) of the 
 ## 4-  view all contact from phonebook list:
  This function extracts all contacts  from the phonebook list and view the added / stored if the user not fill the whole list the un-filled part
  will appear with (no contact added)
+ ![view all](https://user-images.githubusercontent.com/76952991/104128039-fe6c8e80-536d-11eb-8de0-863bf8cb87b9.jpeg)
 
