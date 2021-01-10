@@ -114,3 +114,119 @@ home:
 
     ; take number of contacts you wanna add
    call ReadInt
+   ;enter name
+     mov edx,OFFSET enter_name
+    call WriteString
+    inc edx
+    call crlf
+   
+   
+     
+ cmp eax,1
+ je  add1
+ cmp eax,2
+ je  add2
+ cmp eax,3
+ je  add3
+ cmp eax,4
+ je  add4
+ cmp eax,5
+ je  add5
+ jne no_space
+
+
+ ; if1
+ add1:   
+     mov edx,OFFSET str1
+     mov ecx ,(LENGTHOF str1)-1
+     call ReadString
+     call crlf
+   
+   ;message (contact added)
+   mov edx,OFFSET added
+    call WriteString
+    call crlf
+
+    jmp again
+
+
+  ; if two
+   add2:
+     mov edx,OFFSET str1
+     mov ecx ,(LENGTHOF str1)-1  
+     call ReadString
+     call crlf
+
+     mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+     
+    mov edx,OFFSET str2
+    mov ecx ,(LENGTHOF str2)-1
+     call ReadString
+     call crlf
+
+     mov edx,OFFSET added
+    call WriteString
+    call crlf
+    jmp again
+
+
+;if 3
+add3:
+   mov edx,OFFSET str1
+     mov ecx ,(LENGTHOF str1)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+    mov edx,OFFSET str2
+    mov ecx ,(LENGTHOF str2)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+      mov edx,OFFSET str3
+     mov ecx ,(LENGTHOF str3)-1
+     call ReadString
+     call crlf
+
+     mov edx,OFFSET added
+    call WriteString
+    call crlf
+      
+      jmp again
+
+   
+
+
+      ;if 4
+     add4:
+      mov edx,OFFSET str1
+     mov ecx ,(LENGTHOF str1)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+    mov edx,OFFSET str2
+    mov ecx ,(LENGTHOF str2)-1
+     call ReadString
+     call crlf
+
+      mov edx,OFFSET anotherNumber
+    call WriteString
+     call crlf
+
+     mov edx,OFFSET str3
+    mov ecx ,(LENGTHOF str2)-1
+     call ReadString
+     call crlf
