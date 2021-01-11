@@ -230,3 +230,117 @@ add3:
     mov ecx ,(LENGTHOF str2)-1
      call ReadString
      call crlf
+	 remove2:
+
+push edi            ;save registers
+push es
+push ds
+mov ax,0
+mov ecx,1
+mov edi,OFFSET str2
+pop es              ;load ES with DS
+rep stosw           ;clear Buffer
+pop es              ;restore registers
+pop edi
+
+ mov edx,OFFSET removed
+    call WriteString
+    call crlf
+
+    jmp again
+
+
+
+
+remove3:
+
+push edi           ;save registers
+push es
+push ds
+mov ax,0
+mov ecx,1
+mov edi,OFFSET str3
+pop es            ;load ES with DS
+rep stosw         ;clear Buffer
+pop es            ;restore registers
+pop edi
+
+ mov edx,OFFSET removed
+    call WriteString
+    call crlf
+
+jmp again
+
+remove4:
+
+push edi             ;save registers
+push es
+push ds
+mov ax,0
+mov ecx,1
+mov edi,OFFSET str4
+pop es               ;load ES with DS
+rep stosw            ;clear Buffer
+pop es               ;restore registers
+pop edi
+  
+ mov edx,OFFSET removed
+    call WriteString
+    call crlf
+
+    jmp again
+
+remove5:
+
+push edi               ;save registers
+push es
+push ds
+mov ax,0
+mov ecx,1
+mov edi,OFFSET str5
+pop es                ;load ES with DS
+rep stosw             ;clear Buffer
+pop es                ;restore registers
+pop edi
+jmp again
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;message says removed
+
+    mov edx,OFFSET removed
+    call WriteString
+    call crlf
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ ;view one contanct by entering its index 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+view_number:
+
+    mov edx,OFFSET view_name
+    call WriteString
+    call crlf 
+
+ ;give number by index
+ ;;;;;;;;;;;;;;;;;;;;;;;;
+ 
+ call ReadInt
+   
+    
+ cmp eax,1
+ je  view1
+ cmp eax,2
+ je  view2
+ cmp eax,3
+ je  view3
+ cmp eax,4
+ je  view4
+ cmp eax,5
+ je  view5
+ jne again
